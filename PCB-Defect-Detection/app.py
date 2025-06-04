@@ -5,7 +5,11 @@ from PIL import Image
 import streamlit as st
 from ultralytics import YOLO
 
-MODEL_DIR = './results/weights/best.pt'
+# MODEL_DIR = './results/weights/best.pt'
+
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_DIR = os.path.join(BASE_DIR, 'results', 'weights', 'best.pt')
 
 # Defect names corresponding to class indices 0-6
 defect_names_map = {
